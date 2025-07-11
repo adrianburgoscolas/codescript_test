@@ -7,7 +7,7 @@ import { Component, input } from "@angular/core";
   styleUrl: "./car-card.component.css",
 })
 export class CarCardComponent {
-  vehicleName = input("");
-  vehicleCountry = input("");
+  companyName = input("");
+  companyCountry = input("");
   vehicleTypes = input<any>([]);
 }
