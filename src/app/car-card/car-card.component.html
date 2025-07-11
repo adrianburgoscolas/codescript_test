@@ -1,0 +1,6 @@
+<h3>{{ vehicleName() }}</h3>
+<p>{{ vehicleCountry() }}</p>
+
+@for (item of vehicleTypes(); track item) {
+  <p>{{ item?.Name }}</p>
+}

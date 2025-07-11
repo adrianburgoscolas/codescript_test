@@ -1,0 +1,7 @@
+.nav-menu {
+  list-style: none outside;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}

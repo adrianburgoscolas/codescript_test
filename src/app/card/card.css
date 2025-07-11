@@ -1,0 +1,9 @@
+.red {
+  color: red;
+}
+
+.card-content {
+  border: 2px solid;
+  border-radius: 9999px;
+  padding: 5px 10px;
+}
