@@ -18,10 +18,12 @@ export class CardService {
   getPokemonsNameList(
     url: string,
     limit: number,
-    itemsList: WritableSignal<Array<any>>,
+    pokemonsNameList: WritableSignal<Array<any>>,
   ): void {
-    this.http.get<any>(url).subscribe((cars) => {
-      itemsList.set(cars.Results);
+    this.http.get<any>(url, { params: { limit } }).subscribe((pokemons) => {
+      pokemonsNameList.set(
+        pokemons.results.map((pokemon: any) => pokemon.name),
+      );
     });
     // const res = await fetch(`${url}/?limit=${limit}`);
     // const pokemons = await res.json();

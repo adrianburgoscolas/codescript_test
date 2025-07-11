@@ -1,48 +1,43 @@
-<p>cars</p>
-<!-- <span appHellofragment>{{name | capitalize}}</span> -->
-<!-- <br /> -->
-<!-- <span>{{greeting | capitalize}}</span> -->
-<!-- <div class="card-content"> -->
-<!--   <ng-content>Ng Content Fallback</ng-content> -->
-<!-- </div> -->
-<!-- <ul> -->
-<!--   <li *ngFor="let item of info().list"> -->
-<!--     <span -->
-<!--       [ngClass]="{'red': item.includes('t')}" -->
-<!--       *ngIf="item.length < 4" -->
-<!--     > -->
-<!--       {{item}} -->
-<!--     </span> -->
-<!--   </li> -->
-<!-- </ul> -->
-<!-- <hr /> -->
-<!-- <input -->
-<!--   id="limit" -->
-<!--   type="number" -->
-<!--   min="0" -->
-<!--   max="20" -->
-<!--   value="20" -->
-<!--   [formControl]="cardLimitForm" -->
-<!-- /> -->
-<!-- <ul> -->
-@for (item of this.carsList(); track item) {
-<app-car-card
-  [vehicleCountry]="item.Country"
-  [vehicleName]="item.Mfr_CommonName"
-  [vehicleTypes]="item.VehicleTypes"
+<span appHellofragment>{{name | capitalize}}</span>
+<br />
+<span>{{greeting | capitalize}}</span>
+<div class="card-content">
+  <ng-content>Ng Content Fallback</ng-content>
+</div>
+<ul>
+  <li *ngFor="let item of info().list">
+    <span
+      [ngClass]="{'red': item.includes('t')}"
+      *ngIf="item.length < 4"
+    >
+      {{item}}
+    </span>
+  </li>
+</ul>
+<hr />
+<input
+  id="limit"
+  type="number"
+  min="0"
+  max="20"
+  value="20"
+  [formControl]="cardLimitForm"
 />
-}
-<!-- </ul> -->
-<!-- <p>{{text()}}</p> -->
-<!-- <button (click)="count()">add</button> -->
-<!-- <br /> -->
-<!-- <button -->
-<!--   (click)="buttonClick.emit('clicked')" -->
-<!--   class="red" -->
-<!-- > -->
-<!--   add output -->
-<!-- </button> -->
-<!-- <br /> -->
+<ul>
+  @for (item of pokemonsNameList(); track item) {
+  <li>{{item | capitalize}}</li>
+  }
+</ul>
+<p>{{text()}}</p>
+<button (click)="count()">add</button>
+<br />
+<button
+  (click)="buttonClick.emit('clicked')"
+  class="red"
+>
+  add output
+</button>
+<br />
 <!-- <form [(ngModel)]="formHandler"> -->
 <!--   <label -->
 <!--     [style.margin-right]="'10px'" -->
@@ -56,8 +51,8 @@
 <!--     [style.margin-top]="'10px'" -->
 <!--   /> -->
 <!-- </form> -->
-<!-- <ng-template #helloFragment> -->
-<!--   <p>Hello fragment</p> -->
-<!-- </ng-template> -->
-<!-- <button (click)="showFragmentHandler()">Toggle fragment</button> -->
-<!-- <ng-container [ngTemplateOutlet]="showFragment" /> -->
+<ng-template #helloFragment>
+  <p>Hello fragment</p>
+</ng-template>
+<button (click)="showFragmentHandler()">Toggle fragment</button>
+<ng-container [ngTemplateOutlet]="showFragment" />
