@@ -1,9 +1,11 @@
-<div class="cars-container">
-  @for (car of carsList(); track car.Mfr_ID) {
-    <app-car-card
-      [companyCountry]="car.Country"
-      [companyName]="car.Mfr_Name"
-      [vehicleTypes]="car.VehicleTypes"
-    />
-  }
+<div class="container">
+  <div class="cars-container">
+    @for (car of carsList(); track car.Mfr_ID) {
+      <app-car-card
+        [companyCountry]="car.Country"
+        [companyName]="car.Mfr_Name"
+        [vehicleTypes]="car.VehicleTypes"
+      />
+    }
+  </div>
 </div>
