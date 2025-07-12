@@ -25,10 +25,13 @@ export class CardService {
         pokemons.results.map((pokemon: any) => pokemon.name),
       );
     });
-    // const res = await fetch(`${url}/?limit=${limit}`);
-    // const pokemons = await res.json();
-    // this.pokemonsNameList.set(
-    //   pokemons.results.map((pokemon: any) => pokemon.name),
-    // );
+  }
+  getCarsList(
+    url: string,
+    carsList: WritableSignal<Array<Car> | undefined>,
+  ): void {
+    this.http.get<any>(url).subscribe((cars) => {
+      carsList.set(cars.Results);
+    });
   }
 }
