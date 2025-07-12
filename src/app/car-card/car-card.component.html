@@ -1,6 +1,11 @@
-<h3>{{ companyName() }}</h3>
-<p>{{ companyCountry() }}</p>
-
-@for (item of vehicleTypes(); track item) {
-  <p>{{ item.Name }}</p>
-}
+<div class="card-shadow car-card">
+  <h2 class="title ellipsis">{{ companyName() }}</h2>
+  <p class="subtitle">{{ companyCountry() | capitalize }}</p>
+  <div>
+    <div class="vehicle-type-list">
+      @for (item of vehicleTypes(); track item) {
+        <span class="vehicle-type">{{ item.Name }}</span>
+      }
+    </div>
+  </div>
+</div>
