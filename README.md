@@ -1,59 +1,44 @@
-# HelloWorld
+# CodeScript Angular technical test
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+## Table of contents
 
-## Development server
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
 
-To start a local development server, run:
+## Overview
 
-```bash
-ng serve
-```
+### The challenge
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The test consists of building a visual interface from scratch, following as closely as possible the guidelines defined in the design that we share with you for this purpose.
+In order to evaluate not only the skills in the aforementioned area but also other general knowledge of software development (interaction with the repository, knowledge of Git, Git Flow, etc.), it is proposed to proceed as follows:
 
-## Code scaffolding
+     Create a repository in the service provider of your choice (Github, Gitlab, etc) and work on it in solving the exercise.
+     Use, for the solution, the following technologies: Angular. Using the data from this endpoint: https://vpic.nhtsa.dot.gov/api/vehicles/getallmanufacturers?format=json, render a list of cards with the Company name, Country and alist of cars types of the componany.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Screenshot
 
-```bash
-ng generate component component-name
-```
+![](./screenshot.png)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Links
 
-```bash
-ng generate --help
-```
+- Solution URL: [Solution URL](https://github.com/adrianburgoscolas/codescript_test)
+- Live Site URL: [Live Site](https://codescripttest.netlify.app/)
 
-## Building
+## My process
 
-To build the project run:
+### Built with
 
-```bash
-ng build
-```
+- [Angular](https://angular.dev) - Frontend library
+- [TypeScript1](https://www.typescriptlang.org/) - TypeScript is a strongly typed programming language that builds on JavaScript
+- Semantic HTML5 markup
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Author
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Website - [Adrian Burgos: Portfolio](https://adrianburgoscolas.github.io/portfolio/)
+- GitHub - [https://github.com/adrianburgoscolas](https://github.com/adrianburgoscolas)
+- LinkedIn - [Adrian Burgos Frontend Web Developer](https://www.linkedin.com/in/adrian-burgos-1776a6144/)

@@ -13,24 +13,18 @@ import {
 import { CardInfo } from "../card-info";
 import { CommonModule } from "@angular/common";
 import { CardService } from "../card.service";
-import {
-  CARS_API_URL,
-  POKEMONS_API_URL,
-  POKEMONS_DEFAULT_NUMBER,
-} from "../constants";
+import { POKEMONS_API_URL, POKEMONS_DEFAULT_NUMBER } from "../constants";
 import { FormControl, ReactiveFormsModule } from "@angular/forms";
 import { CapitalizePipe } from "@app/capitalize-pipe";
-import { CarCardComponent } from "@app/car-card/car-card.component";
-// import { HellofragmentDirective } from "@app/hellofragment.directive";
+import { HellofragmentDirective } from "@app/hellofragment.directive";
 
 @Component({
   selector: "app-card",
   imports: [
     CommonModule,
-    // CapitalizePipe,
-    // HellofragmentDirective,
+    CapitalizePipe,
+    HellofragmentDirective,
     ReactiveFormsModule,
-    CarCardComponent,
   ],
   templateUrl: "./card.html",
   styleUrl: "./card.css",
@@ -42,13 +36,12 @@ export class Card {
 
   cardLimitForm = new FormControl(20);
   pokemonsNameList = signal<any[]>([]);
-  carsList = signal<any[]>([]);
   constructor() {
     this.cardLimitForm.valueChanges.subscribe((limit) => {
       this.cardService.getPokemonsNameList(
-        CARS_API_URL,
+        POKEMONS_API_URL,
         limit ?? POKEMONS_DEFAULT_NUMBER,
-        this.carsList,
+        this.pokemonsNameList,
       );
     });
   }
@@ -56,7 +49,7 @@ export class Card {
     this.cardService.getPokemonsNameList(
       POKEMONS_API_URL,
       POKEMONS_DEFAULT_NUMBER,
-      this.carsList,
+      this.pokemonsNameList,
     );
   }
 
@@ -88,6 +81,6 @@ export class Card {
   }
   cardContent = contentChild("spanContent", { read: ElementRef });
   ngAfterContentInit() {
-    console.log("card content: ", this.cardContent()?.nativeElement.innerText);
+    console.log(this.cardContent()?.nativeElement.text);
   }
 }

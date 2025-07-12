@@ -1,6 +1,15 @@
 <main>
-  <h1>Hello World</h1>
-  <nav>
+  <div
+    appInView
+    [threshold]="0"
+    (inView)="onInView($event)"
+  ></div>
+  <nav
+    class="navbar container"
+    [class.shadow]="!isScrolling()"
+  >
+    <span>Cars List</span>
+    <div class="space"></div>
     <ul class="nav-menu">
       <li>
         <a routerLink="/">Home</a>
