@@ -7,7 +7,12 @@ export class CapitalizePipe implements PipeTransform {
   transform(line: string): string {
     return line
       .split(" ")
-      .map((word) => `${word.at(0)?.toUpperCase()}${word.slice(1)}`)
+      .map((word) => {
+        if (word.startsWith("\(")) {
+          return word;
+        }
+        return `${word.at(0)?.toUpperCase()}${word.slice(1).toLowerCase()}`;
+      })
       .join(" ");
   }
 }

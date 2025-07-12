@@ -1,0 +1,40 @@
+.car-card {
+  height: 13rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+}
+.card-shadow {
+  box-shadow: 2px 6px 20px 1px rgba(219, 219, 219, 0.57);
+}
+.subtitle {
+  font-weight: 600;
+  color: #aeb2ba;
+}
+.title {
+  margin-top: 0;
+  font-weight: 500;
+}
+.vehicle-type {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 0.5rem;
+  background: #fee5f0;
+  color: #55021a;
+  padding: 0.2rem 0.5rem;
+}
+.vehicle-type-list {
+  overflow-y: auto;
+  height: 4.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 0.5rem;
+}
+.ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* number of lines */
+  line-clamp: 2;
+  overflow: hidden;
+}

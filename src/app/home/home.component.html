@@ -1,60 +1,11 @@
-<app-card
-  [info]="cardInfo"
-  [text]="text"
-  [(counter)]="appCounter"
-  (buttonClick)="onCardButtonClick($event)"
->
-  <span #spanContent>The Content</span>
-</app-card>
-
-<!-- <a href=""></a> -->
-<!-- <div>{{ appCounter() }}</div> -->
-<!-- <p>The card name is: {{ cardName() }}</p> -->
-<!-- <form -->
-<!--   (ngSubmit)="onSubmit()" -->
-<!--   [formGroup]="person" -->
-<!-- > -->
-<!--   <label -->
-<!--     [style.margin-right]="'10px'" -->
-<!--     for="home-firstname" -->
-<!--     >First Name:</label -->
-<!--   > -->
-<!--   <input -->
-<!--     id="home-firstname" -->
-<!--     type="text" -->
-<!--     name="firstname" -->
-<!--     value="" -->
-<!--     placeholder="Enter First Name" -->
-<!--     formControlName="firstname" -->
-<!--   /> -->
-<!--   <br /> -->
-<!--   <label -->
-<!--     [style.margin-right]="'10px'" -->
-<!--     for="home-lastname" -->
-<!--     >Last Name:</label -->
-<!--   > -->
-<!--   <input -->
-<!--     id="home-lastname" -->
-<!--     type="text" -->
-<!--     name="lastname" -->
-<!--     value="" -->
-<!--     placeholder="Enter Last Name" -->
-<!--     formControlName="lastname" -->
-<!--   /> -->
-<!--   <br /> -->
-<!--   <label -->
-<!--     [style.margin-right]="'10px'" -->
-<!--     for="home-age" -->
-<!--     >Age:</label -->
-<!--   > -->
-<!--   <input -->
-<!--     id="home-age" -->
-<!--     type="number" -->
-<!--     name="age" -->
-<!--     min="0" -->
-<!--     placeholder="Enter the age" -->
-<!--     formControlName="age" -->
-<!--   /> -->
-<!--   <br /> -->
-<!--   <button type="submit">Submit</button> -->
-<!-- </form> -->
+<div class="container">
+  <div class="cars-container">
+    @for (car of carsList(); track car.Mfr_ID) {
+      <app-car-card
+        [companyCountry]="car.Country"
+        [companyName]="car.Mfr_Name"
+        [vehicleTypes]="car.VehicleTypes"
+      />
+    }
+  </div>
+</div>
