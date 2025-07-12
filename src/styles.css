@@ -84,6 +84,7 @@
     U+2215, U+FEFF, U+FFFD;
 }
 :root {
+  box-sizing: border-box;
   font-family: "Poppins";
   color: #1f2937;
   a {
