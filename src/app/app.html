@@ -1,5 +1,13 @@
 <main>
-  <nav class="navbar container">
+  <div
+    appInView
+    [threshold]="0"
+    (inView)="onInView($event)"
+  ></div>
+  <nav
+    class="navbar container"
+    [class.shadow]="!isScrolling()"
+  >
     <span>Cars List</span>
     <div class="space"></div>
     <ul class="nav-menu">
