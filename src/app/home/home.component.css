@@ -13,7 +13,7 @@
 }
 .cars-container {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   align-items: stretch;
   @media (width >= 40rem) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
